@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
 interface aboutProps {}
 
 const about: React.FC<aboutProps> = () => {
-  return <div>{"Aboutsss"}</div>;
+  return <div>{'Abdoutsss'}</div>;
 };
 
 export default about;
