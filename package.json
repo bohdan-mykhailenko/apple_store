@@ -1,0 +1,33 @@
+{
+  "name": "apple_store",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "format": "prettier --write . --ignore-path .gitignore",
+    "lint": "eslint --ext .ts,.tsx --ignore-path .eslintignore",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "sass": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "typescript": "latest",
+    "husky": "latest",
+    "lint-staged": "latest",
+    "prettier": "latest"
+  },
+  "lint-staged": {
+    "*.js": "npm run lint"
+  }
+}
