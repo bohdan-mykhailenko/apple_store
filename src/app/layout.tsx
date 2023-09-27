@@ -1,33 +1,43 @@
-import Head from "next/head";
-import { Metadata } from "next";
+import { Metadata } from 'next';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { Providers } from '@/redux/provider';
 
 const metadata: Metadata = {
-  title: "Home",
-  description: "Welcome to Next.js",
-  keywords: ["Next", "React"],
+  title: 'Home',
+  description: 'Welcome to Next.js',
+  keywords: ['Next', 'React'],
 };
 
-export default function RootLayout({
-  children,
-}: {
+interface RootLayoutProps {
   children: React.ReactNode;
-}) {
+}
+
+const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
   const keywordsString =
     metadata.keywords && Array.isArray(metadata.keywords)
-      ? metadata.keywords.join(", ")
-      : "";
+      ? metadata.keywords.join(', ')
+      : '';
   const titleString = metadata.title as string;
 
   return (
     <html lang="en">
-      <Head>
+      <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content={metadata.description!} />
         <meta name="keywords" content={keywordsString} />
         <title>{titleString}</title>
-      </Head>
-      <body>{children}</body>
+      </head>
+      <body suppressHydrationWarning={true}>
+        <Providers>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </Providers>
+      </body>
     </html>
   );
-}
+};
+
+export default RootLayout;

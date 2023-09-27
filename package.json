@@ -11,9 +11,11 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "latest",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
+    "react-redux": "latest",
     "sass": "latest"
   },
   "devDependencies": {
@@ -22,10 +24,10 @@
     "@types/react-dom": "latest",
     "eslint": "latest",
     "eslint-config-next": "latest",
-    "typescript": "latest",
     "husky": "latest",
     "lint-staged": "latest",
-    "prettier": "latest"
+    "prettier": "latest",
+    "typescript": "latest"
   },
   "lint-staged": {
     "*.js": "npm run lint"

@@ -1,0 +1,26 @@
+{
+  "en": {
+    "navigation": {
+      "header": ["Home", "Products", "Entertainment", "Support"],
+      "footer": [
+        "Privacy Policy",
+        "Terms of Use",
+        "Sales and Refunds",
+        "Legal",
+        "Site Map"
+      ]
+    }
+  },
+  "ua": {
+    "navigation": {
+      "header": ["Головна", "Продукти", "Розваги", "Підтримка"],
+      "footer": [
+        "Політика конфіденційності",
+        "Умови використання",
+        "Продажі та повернення",
+        "Юридична інформація",
+        "Карта сайту"
+      ]
+    }
+  }
+}

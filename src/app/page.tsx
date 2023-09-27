@@ -1,9 +1,10 @@
-import React from "react";
+import React from 'react';
+import RootLayout from './layout';
 
-interface pageProps {}
+interface HomePageProps {}
 
-const page: React.FC<pageProps> = () => {
-  return <div>Home</div>;
+const HomePage: React.FC<HomePageProps> = () => {
+  return <h1>Homessss</h1>;
 };
 
-export default page;
+export default HomePage;
