@@ -1,7 +1,7 @@
-import Head from 'next/head';
 import { Metadata } from 'next';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { Providers } from '@/redux/provider';
 
 const metadata: Metadata = {
   title: 'Home',
@@ -22,17 +22,19 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
 
   return (
     <html lang="en">
-      <Head>
+      <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content={metadata.description!} />
         <meta name="keywords" content={keywordsString} />
         <title>{titleString}</title>
-      </Head>
+      </head>
       <body suppressHydrationWarning={true}>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <Providers>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

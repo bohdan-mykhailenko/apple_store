@@ -6,7 +6,7 @@ interface FooterProps {}
 export const Footer: React.FC<FooterProps> = () => {
   return (
     <div>
-      <Navigation component="footer" />
+      <Navigation section="footer" />
     </div>
   );
 };
